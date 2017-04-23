@@ -24,12 +24,13 @@ public:
 			{
 				if (i % 2 == 0)
 				{
-					reverse(s.begin() + i*k, s.begin() + (i + 1)*k);
+					reverse(s.begin() + i*k, min(s.begin() + (i + 1)*k, s.end()));
 				}
 				i++;
 			}
 
 		}
+		return s;
 	}
 };
 
